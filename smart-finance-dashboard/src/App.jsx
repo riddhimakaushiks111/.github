@@ -53,7 +53,7 @@ const App = () => {
 
   const updateTransaction = (updatedItem) => {
     setTransactions(transactions.map(t => t.id === updatedItem.id ? updatedItem : t));
-    setEditingTransaction(null); // Close the edit mode
+    setEditingTransaction(null); 
   };
 
   const deleteTransaction = (id) => {
@@ -67,7 +67,7 @@ const App = () => {
         <h1>Smart Finance Dashboard</h1>
         {totals.expenses > BUDGET_LIMIT && (
           <div className="alert-banner">
-            ⚠️ BUDGET ALERT: You've spent more than ${BUDGET_LIMIT}!
+            BUDGET ALERT: You've spent more than ${BUDGET_LIMIT}!
           </div>
         )}
       </header>
