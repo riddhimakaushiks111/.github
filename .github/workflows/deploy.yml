@@ -20,8 +20,10 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm install || echo "No package.json - skipping"
+      run: npm install
       
     - name: Trigger Deployment
       run: |
         curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+
+    
